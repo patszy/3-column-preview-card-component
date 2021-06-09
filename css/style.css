@@ -1,0 +1,145 @@
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+
+:root {
+    --color-bright-orange: hsl(31, 77%, 52%);
+    --color-dark-cyan: hsl(184, 100%, 22%);
+    --color-very-dark-cyan: hsl(179, 100%, 13%);
+    --color-transparent-white: hsla(0, 0%, 100%, 0.75);
+    --color-very-light-gray: hsl(0, 0%, 95%);
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 15px;
+}
+
+@media only screen and (max-width: 900px) {
+    html {
+        font-size: 70%;
+    }
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    font-family: 'Lexend Deca', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-very-light-gray);
+    padding: 1rem;
+}
+
+.container {
+    display: flex;
+    color: var(--color-very-light-gray);
+    border-radius: .7rem;
+    overflow: hidden;
+}
+
+@media only screen and (max-width: 600px) {
+    .container {
+        flex-direction: column;
+    }
+}
+
+.card{
+    padding: 3rem;
+    width: 20rem;
+}
+
+.container__card-1 {
+    background-color: var(--color-bright-orange);
+}
+
+.container__card-2 {
+    background-color: var(--color-dark-cyan);
+}
+
+.container__card-3 {
+    background-color: var(--color-very-dark-cyan);
+}
+
+svg {
+    margin-bottom: 1.5rem;
+}
+
+h1 {
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    font-size: 2rem;
+}
+
+.container p {
+    color: var(--color-transparent-white);
+    margin-bottom: 5rem;
+    line-height: 1.6rem;
+    letter-spacing: 1px;
+}
+
+button {
+    border-radius: 50px;
+    border: 2px solid transparent;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+}
+
+.container__card-1 button {
+    color: var(--color-bright-orange);
+}
+
+.container__card-2 button {
+    color: var(--color-dark-cyan);
+}
+
+.container__card-3 button {
+    color: var(--color-very-dark-cyan);
+}
+
+button:hover {
+    border: 2px solid var(--color-very-light-gray);
+    background-color: transparent;
+    color: white;
+    cursor: pointer;
+}
+
+footer {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: .7rem;
+    color: var(--color-dark-cyan);
+    animation-name: fadeIn;
+    animation-duration: 1s;
+}
+
+@media only screen and (max-width: 600px) {
+    footer {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 350px) {
+    html {
+        font-size: 4vw;
+    }
+}
